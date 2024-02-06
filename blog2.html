@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f0f02a;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .likes-section, .comment-section {
+            margin-bottom: 20px;
+        }
+        .comment-section input[type="text"] {
+            width: calc(100% - 80px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .comment-section button {
+            background-color: #f5f2efc4;
+            color: #fff9f9a9;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .comments {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .comment {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-container">
+        <div class="blog-content">
+            <header>
+                <h1 class="headings">Unplugged '23</h1>
+                <p>Published on February 5, 2024</p>
+            </header>
+            <main>
+                <p>The music club's annual acoustic music event, Unplugged 2023 took place at the Vindhya Canteen on the 30th and 31st of October 2023. Notably, this was the first time it spanned for two days instead of one. I was there on the first day, and I hope you were there too. But, just in case you weren’t, I hope I can paint an image for you.
+        
+                    It was late into the evening, and the sun had almost completely set. All of VC was illuminated by warm hanging lights. It almost gave me the illusion that the place was lit up by swarms of fireflies. The event lasted well into the night, with musicians playing 1-3 songs each, and then giving way for the next performers. 
+                    
+                    If I had to set the scene for you, I'd tell you that it was extremely mellow and calm. This college is known for its swarm of students always working, always moving, always grinding. I got to see all of those unique hard workers slow down for a few hours, and enjoy the pureness of listening to music in a community. It’s truly special to see around 100 people together, just singing their favourite songs. The performers themselves were students from all batches, from UG1 to PhD. 
+                    
+                    There were performances from a range of genres, be it carnatic classical, to indie rock. People performed their own renditions of well-loved songs, occasionally adding their own twist to it. We all sang a whole array of songs together, from old hindi gems from Lata Mangeshkar to classic rock staples from the likes of Eric Clapton to recent tunes by well known musicians like Arijit Singh, Ed Sheeran and Prateek Kuhad. Around the canteen, there were stalls from La Pinos, Theka Coffee and Makers of Milkshake, where students, researchers and professors alike could get pizzas, kulfis, milkshakes etc to compliment the music. 
+                    
+                    The air was fresh, and the night was young. The tungsten lighting, the breezy laughter, the group singing, it all reminded us that IIIT is more than just its academic records, and renowned research. It’s about the community and the joy and art which we can create together.
+                    
+                    The soulful atmosphere continued on the second day made more exuberant by the collaboration with the fashion club. Added to the mellow acoustic vibe from day 1 was a sense of bewitched playfulness, as the audience now involved people dressed up in their favourite Halloween clothes, with the many face paints each telling a different story.
+                    
+                    Unplugged was conducted on a scale never seen before. Bands from other colleges such as JNTUH, gig bands from the city such as Zephyr, Alumni and the professors came together to perform melodious renditions of their favourite songs.
+                    
+                    The faculty in particular also passed on meaningful messages against war which are always relevant, but especially so in these times of geopolitical tension in the middle east.
+                    
+                    At one point in time, as the independent performer Rohit, performed a beautiful bollywood medley the whole crowd clapped and swayed to his music. It is this sense of bringing people together unanimously that in my opinion captures why music is almost magical in what it does.</p>
+            </main>
+        </div>
+
+        <div class="likes-section">
+            <button class="likes-btn">Like</button>
+            <span class="like-count">0</span>
+        </div>
+
+        <div class="comment-section">
+            <input type="text" class="comment-input" placeholder="Enter your comment">
+            <button class="comment-btn">Add Comment</button>
+            <button class="clear-comments-btn">Clear Comments</button>
+        </div>
+
+        <div class="comments">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".likes-btn").addEventListener("click", function() {
+                let likeCount = parseInt(document.querySelector(".like-count").textContent);
+                likeCount++;
+                document.querySelector(".like-count").textContent = likeCount;
+            });
+
+            document.querySelector(".comment-btn").addEventListener("click", function() {
+                let commentInput = document.querySelector(".comment-input").value.trim();
+                if (commentInput !== "") {
+                    let commentElement = document.createElement("div");
+                    commentElement.classList.add("comment");
+                    commentElement.textContent = commentInput;
+                    document.querySelector(".comments").appendChild(commentElement);
+                    document.querySelector(".comment-input").value = "";
+                }
+            });
+
+            document.querySelector(".clear-comments-btn").addEventListener("click", function() {
+                document.querySelector(".comments").innerHTML = "";
+            });
+        });
+    </script>
+</body>
+</html>

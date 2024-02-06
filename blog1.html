@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS styles for the blog */
+        .blog-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f0f02a;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .likes-section, .comment-section {
+            margin-bottom: 20px;
+        }
+        .comment-section input[type="text"] {
+            width: calc(100% - 80px); /* Adjust width as needed */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .comment-section button {
+            background-color: #f5f2efc4;
+            color: #fff9f9a9;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .comments {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .comment {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-container">
+        <div class="blog-content">
+            <header>
+                <h1 class="headings">Chess, Time-Turners, and Tea</h1>
+                <p>Published on February 5, 2024</p>
+            </header>
+            <main>
+                <p>How many people do we walk by every day without knowing anything about them? We sit next to people in class, without even knowing their names, let alone their ambitions, goals or little happinesses. In all earnestness, we might smile at people every day, but we don’t truly know most people around us. 
+        
+                    To fix this, our team of writers from Ping! decided to spend a few minutes with students of this prestigious fast-paced college– to have a simple conversation. 
+                    
+                    As our team scrambled around campus trying to find people who were willing to answer our list of questions, we discovered that each person had their own perspectives on life. Their own spark that burns their flame, their own glint in their eyes. 
+                    
+                    Each person's interview tells us something unmistakable about them. These individual dreams, aspirations and goals are strokes of paint that represent the beauty of the canvas of IIIT. 
+                    
+                    This project, in a way, is our tribute to the beauty of the people in the campus. We call it our very own Radical Empathy Project, heavily inspired by the podcast of the same name. So sit down, make yourself cosy, and spend 5 minutes of your day with us and all of these beautiful people. 
+                    
+                    The first person we got the privilege of interviewing, is his very own character. His laid-back personality and endless jokes make him very endearing. You’ll often see him mull over a chess game, or go into intense debates about anything political. You might catch him around JC, late into the night, a cup of tea in hand, with a group of friends. We interviewed him in one of these “chai-breaks”. </p>
+            </main>
+        </div>
+
+        <div class="likes-section">
+            <button class="likes-btn">Like</button>
+            <span class="like-count">0</span>
+        </div>
+
+        <div class="comment-section">
+            <input type="text" class="comment-input" placeholder="Enter your comment">
+            <button class="comment-btn">Add Comment</button>
+            <button class="clear-comments-btn">Clear Comments</button>
+        </div>
+
+        <div class="comments">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".likes-btn").addEventListener("click", function() {
+                let likeCount = parseInt(document.querySelector(".like-count").textContent);
+                likeCount++;
+                document.querySelector(".like-count").textContent = likeCount;
+            });
+
+            document.querySelector(".comment-btn").addEventListener("click", function() {
+                let commentInput = document.querySelector(".comment-input").value.trim();
+                if (commentInput !== "") {
+                    let commentElement = document.createElement("div");
+                    commentElement.classList.add("comment");
+                    commentElement.textContent = commentInput;
+                    document.querySelector(".comments").appendChild(commentElement);
+                    document.querySelector(".comment-input").value = "";
+                }
+            });
+
+            document.querySelector(".clear-comments-btn").addEventListener("click", function() {
+                document.querySelector(".comments").innerHTML = "";
+            });
+        });
+    </script>
+</body>
+</html>

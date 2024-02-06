@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharv Bhatt Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
+        .timeline-component {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img src="darkmode.png" alt="Dark Mode Icon" class="icon dark-mode-icon">
+        <img src="lightmode.png" alt="Light Mode Icon" class="icon light-mode-icon">
+    </button>
+
+    <button class="arrow left-arrow" onclick="navigate('left')">
+        <img src="left-arrow.png" alt="Left Arrow Icon" class="arrow-icon">
+    </button>
+
+    <button class="arrow right-arrow" onclick="navigate('right')">
+        <img src="right-arrow.png" alt="Right Arrow Icon" class="arrow-icon">
+    </button>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Atharv Bhatt</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="design-section">
+        <h1 class="headings">Padhai</h1><br><br>
+        <div class="timeline">
+            <div class="timeline-component timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h2>2004</h2>
+                <h4>Hamad Hospital</h4>
+                <p>Born</p>
+                <h5>Courses Taken:</h5><p>Survival</p>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h2>2008</h2>
+                <h4>I forgot where</h4>
+                <p>Kindergarten</p>
+                <h5>Courses Taken:</h5><p>Fun</p>
+            </div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty"></div>
+            <div class="timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h2>2009</h2>
+                <h4>DPS-MIS Doha, Qatar</h4>
+                <p>Nursery</p>
+                <h5>Courses Taken:</h5><p>Rocket Science<br>Quantum Physics</p>
+            </div>
+            <div class="timeline-component timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty"></div>
+            <div class="timeline-component timeline-content">
+                <h2>2011</h2>
+                <h4>DPS-MIS Doha, Qatar</h4>
+                <p>First Grade</p>
+                <h5>Courses Taken:</h5><p>Fun</p>
+            </div>
+            <div class="timeline-middle"></div>
+            <div class="timeline-component timeline-empty"></div>
+            <div class="timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h2>2023</h2>
+                <h4>IIIT Hyderabad</h4>
+                <p>Undergraduate, CSE</p>
+                <h5>Courses Taken:</h5>
+                <p>Computer Programming<br>Discrete Math<br>Real Analysis<br>Digital Systems and Microcontrollers</p>
+            </div>
+            <div class="timeline-component timeline-empty"></div>
+            <div class="timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h2>2024 (Present)</h2>
+                <h4>IIIT Hyderabad</h4>
+                <h5>Courses Taken:</h5>
+                <p>Suicide note</p>
+            </div>
+            <div class="timeline-middle"></div>            
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

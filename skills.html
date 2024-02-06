@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharv Bhatt Skills</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <img src="darkmode.png" alt="Dark Mode Icon" class="icon dark-mode-icon">
+        <img src="lightmode.png" alt="Light Mode Icon" class="icon light-mode-icon">
+    </button>
+
+    <button class="arrow left-arrow" onclick="navigate('left')">
+        <img src="left-arrow.png" alt="Left Arrow Icon" class="arrow-icon">
+    </button>
+
+    <button class="arrow right-arrow" onclick="navigate('right')">
+        <img src="right-arrow.png" alt="Right Arrow Icon" class="arrow-icon">
+    </button>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Atharv Bhatt</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-content">
+        <h1 class="headings">Skill bars</h1>
+        <h2 style="text-align: center; font-size: 25px;">
+            <span style="color: #ff7f0e;">Beginner</span>
+            <span style="color: #2ca02c;">Intermediate</span>
+            <span style="color: #1f77b4;">Pretty good</span>
+        </h2>
+        
+        <div class="skill-bars">
+            <div class="skill">
+                <div class="skill-name">Art</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar beginner"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Sports</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar pretty-good"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Programming</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar intermediate"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Life</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar beginner"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Cooking</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar intermediate"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Leadership</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar pretty-good"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Time management</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar intermediate"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">Adaptability</div>
+                <div class="skill-level">
+                    <div class="skill-level-bar pretty-good"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
